@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AutofocusDirective } from '../directives/02-autofocus.directive';
+import { AutofocusDirective } from '../../directives/02-autofocus.directive';
 
 @Component({
   selector: 'app-autofocus-02',

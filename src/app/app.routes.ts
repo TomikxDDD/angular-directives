@@ -1,6 +1,6 @@
 import { Route, Routes } from '@angular/router';
-import { PwValidation01Component } from './pw-validation-01/pw-validation-01.component';
-import { Autofocus02Component } from './autofocus-02/autofocus-02.component';
+import { PwValidation01Component } from './pages/pw-validation-01/pw-validation-01.component';
+import { Autofocus02Component } from './pages/autofocus-02/autofocus-02.component';
 
 type RouteRaw = {
   path: string;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { routesRaw } from '../app.routes';
 import { MatListModule } from '@angular/material/list';
 import { RouterLinkActive } from '@angular/router';
+import { routesRaw } from '../../app.routes';
 
 @Component({
   selector: 'app-navigation',
