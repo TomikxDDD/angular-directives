@@ -1,0 +1,30 @@
+<div class="flex justify-center items-center max-w-xs mx-auto">
+  <form [formGroup]="loginForm">
+    <mat-form-field class="w-full">
+      <mat-label>User login</mat-label>
+      <input matInput type="text" formControlName="user" />
+    </mat-form-field>
+    <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+      <mat-label> Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        appPasswordValidation
+      />
+      <mat-error
+        *ngIf="loginForm.get('password')?.hasError('passwordValidator')"
+      >
+        <p>
+          Incorrect password format. Your password needs to contain at least:
+        </p>
+        <ul>
+          <li>eight character in total.</li>
+          <li>one special character</li>
+          <li>one lowercase character</li>
+          <li>one uppercase character and one number</li>
+        </ul>
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>

@@ -1,0 +1,5 @@
+<mat-nav-list>
+  @for (link of routesRaw; track link) {
+    <a mat-list-item [href]="link.path">{{ link.label }}</a>
+  }
+</mat-nav-list>
