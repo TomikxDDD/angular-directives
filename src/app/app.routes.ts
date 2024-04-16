@@ -1,6 +1,7 @@
 import { Route, Routes } from '@angular/router';
 import { PwValidation01Component } from './pages/pw-validation-01/pw-validation-01.component';
 import { Autofocus02Component } from './pages/autofocus-02/autofocus-02.component';
+import { LazyLoadedImgComponent } from './pages/lazy-loaded-img-03/lazy-loaded-img.component';
 
 type RouteRaw = {
   path: string;
@@ -21,6 +22,12 @@ export const routesRaw: RouteRaw[] = [
     label: '02 - Autofocus',
     component: Autofocus02Component,
     title: '02 - Autofocus',
+  },
+  {
+    path: '03-lazy-loaded-img',
+    label: '03 - Lazy-loaded image',
+    component: LazyLoadedImgComponent,
+    title: '03 - Lazy-loaded image',
   },
 ];
 
