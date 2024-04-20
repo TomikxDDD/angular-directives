@@ -3,6 +3,7 @@ import { PwValidation01Component } from './pages/pw-validation-01/pw-validation-
 import { Autofocus02Component } from './pages/autofocus-02/autofocus-02.component';
 import { LazyLoadedImgComponent } from './pages/lazy-loaded-img-03/lazy-loaded-img.component';
 import { DragDrop04Component } from './pages/drag-drop-04/drag-drop-04.component';
+import { Ellipses05Component } from './pages/ellipses-05/ellipses-05.component';
 
 type RouteRaw = {
   path: string;
@@ -35,6 +36,12 @@ export const routesRaw: RouteRaw[] = [
     label: '04 - Drag&Drop component',
     component: DragDrop04Component,
     title: '04 - Drag&Drop component',
+  },
+  {
+    path: '05-ellipses',
+    label: '05 - Ellipses component',
+    component: Ellipses05Component,
+    title: '05 - Ellipses component',
   },
 ];
 
