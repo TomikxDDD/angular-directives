@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ActivationEnd, Router, RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -22,4 +23,24 @@ import { NavigationComponent } from './components/navigation/navigation.componen
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  pageTitle: WritableSignal<string> = signal('');
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(
+        filter((e) => e instanceof ActivationEnd),
+        map((e) => {
+          if (e instanceof ActivationEnd) {
+            return e.snapshot?.data['title'];
+          }
+          return null;
+        }),
+      )
+      .subscribe({
+        next: (result) => {
+          this.pageTitle.set(result);
+        },
+      });
+  }
+}

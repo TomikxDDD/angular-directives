@@ -7,6 +7,7 @@
       <button mat-icon-button (click)="sideNav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
+      <span>{{pageTitle()}}</span>
     </mat-toolbar>
     <main class="p-4">
       <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Route, Routes } from '@angular/router';
+import { Data, Route, Routes } from '@angular/router';
 import { PwValidation01Component } from './pages/pw-validation-01/pw-validation-01.component';
 import { Autofocus02Component } from './pages/autofocus-02/autofocus-02.component';
 import { LazyLoadedImgComponent } from './pages/lazy-loaded-img-03/lazy-loaded-img.component';
@@ -11,6 +11,7 @@ type RouteRaw = {
   label: string;
   component: unknown;
   title?: string;
+  data?: Data;
 };
 
 export const routesRaw: RouteRaw[] = [
@@ -18,44 +19,42 @@ export const routesRaw: RouteRaw[] = [
     path: '01-password-validation',
     label: '01 - Password Validation',
     component: PwValidation01Component,
-    title: '01 - Password Validation',
   },
   {
     path: '02-autofocus',
     label: '02 - Autofocus',
     component: Autofocus02Component,
-    title: '02 - Autofocus',
   },
   {
     path: '03-lazy-loaded-img',
     label: '03 - Lazy-loaded image',
     component: LazyLoadedImgComponent,
-    title: '03 - Lazy-loaded image',
   },
   {
     path: '04-drag-drop',
     label: '04 - Drag&Drop component',
     component: DragDrop04Component,
-    title: '04 - Drag&Drop component',
   },
   {
     path: '05-ellipses',
     label: '05 - Ellipses component',
     component: Ellipses05Component,
-    title: '05 - Ellipses component',
   },
   {
     path: '06-click-outside',
     label: '06 - Click outside component',
     component: ClickOutside06Component,
-    title: '06 - Click outside component',
   },
 ];
 
+/**
+ * Copies a 'label' property into 'title' and 'data.title' properties
+ */
+function copyLabelToTitle(route: RouteRaw): RouteRaw {
+  const label = route.label;
+  return { ...route, title: label, data: { title: label } };
+}
+
 export const routes: Routes = routesRaw.map((r: RouteRaw) => {
-  return {
-    path: r.path,
-    component: r.component,
-    title: r.title,
-  } as Route;
+  return copyLabelToTitle(r) as Route;
 });
