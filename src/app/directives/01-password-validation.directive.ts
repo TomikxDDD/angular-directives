@@ -28,7 +28,6 @@ export class PasswordValidationDirective implements Validator {
 
     if (value) {
       const isValid = regex.test(value);
-      console.log('Value', value, '; isValid:', isValid);
 
       if (!isValid) {
         return { passwordValidator: true };

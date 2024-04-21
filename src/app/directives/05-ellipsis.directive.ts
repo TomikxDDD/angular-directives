@@ -19,13 +19,6 @@ export class EllipsisDirective implements AfterViewInit {
     const container = this.el.nativeElement as HTMLElement;
     const content = container.innerHTML;
 
-    console.log(
-      container,
-      content,
-      container.scrollWidth,
-      container.clientWidth,
-    );
-
     if (container.scrollWidth > container.clientWidth) {
       this.renderer.setAttribute(container, 'title', content);
       this.renderer.setStyle(container, 'white-space', 'nowrap');
