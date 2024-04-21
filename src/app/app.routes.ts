@@ -4,6 +4,7 @@ import { Autofocus02Component } from './pages/autofocus-02/autofocus-02.componen
 import { LazyLoadedImgComponent } from './pages/lazy-loaded-img-03/lazy-loaded-img.component';
 import { DragDrop04Component } from './pages/drag-drop-04/drag-drop-04.component';
 import { Ellipses05Component } from './pages/ellipses-05/ellipses-05.component';
+import { ClickOutside06Component } from './pages/click-outside-06/click-outside-06.component';
 
 type RouteRaw = {
   path: string;
@@ -42,6 +43,12 @@ export const routesRaw: RouteRaw[] = [
     label: '05 - Ellipses component',
     component: Ellipses05Component,
     title: '05 - Ellipses component',
+  },
+  {
+    path: '06-click-outside',
+    label: '06 - Click outside component',
+    component: ClickOutside06Component,
+    title: '06 - Click outside component',
   },
 ];
 
