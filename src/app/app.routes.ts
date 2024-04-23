@@ -5,6 +5,7 @@ import { LazyLoadedImgComponent } from './pages/lazy-loaded-img-03/lazy-loaded-i
 import { DragDrop04Component } from './pages/drag-drop-04/drag-drop-04.component';
 import { Ellipses05Component } from './pages/ellipses-05/ellipses-05.component';
 import { ClickOutside06Component } from './pages/click-outside-06/click-outside-06.component';
+import { Confirmation07Component } from './pages/confirmation-07/confirmation-07.component';
 
 type RouteRaw = {
   path: string;
@@ -44,6 +45,11 @@ export const routesRaw: RouteRaw[] = [
     path: '06-click-outside',
     label: '06 - Click outside component',
     component: ClickOutside06Component,
+  },
+  {
+    path: '07-confirmation',
+    label: '07 - Confirmation dialog component',
+    component: Confirmation07Component,
   },
 ];
 

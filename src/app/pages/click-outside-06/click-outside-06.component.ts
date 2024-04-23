@@ -9,9 +9,9 @@ import { ClickOutsideDirective } from '../../directives/06-click-outside.directi
   styleUrl: './click-outside-06.component.scss',
 })
 export class ClickOutside06Component {
-  private readonly renderer = inject(Renderer2)
-  
+  private readonly renderer = inject(Renderer2);
+
   protected close(box: HTMLElement) {
-    this.renderer.setStyle(box, 'background-color', 'red')
+    this.renderer.setStyle(box, 'background-color', 'red');
   }
 }
