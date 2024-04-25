@@ -1,0 +1,12 @@
+<div
+  appInfiniteScroll
+  [scrollThreshold]="125"
+  (scrolledDown)="getRecords(10)"
+  class="h-96 overflow-y-auto m-4 p-4 border border-solid"
+>
+  <ul>
+    @for (title of titles(); track title) {
+      <li class="mb-8 text-2xl">{{ $index + 1 }}. {{ title }}</li>
+    }
+  </ul>
+</div>

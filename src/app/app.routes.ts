@@ -6,6 +6,7 @@ import { DragDrop04Component } from './pages/drag-drop-04/drag-drop-04.component
 import { Ellipses05Component } from './pages/ellipses-05/ellipses-05.component';
 import { ClickOutside06Component } from './pages/click-outside-06/click-outside-06.component';
 import { Confirmation07Component } from './pages/confirmation-07/confirmation-07.component';
+import { InfiniteScroll08Component } from './pages/infinite-scroll-08/infinite-scroll-08.component';
 
 type RouteRaw = {
   path: string;
@@ -50,6 +51,11 @@ export const routesRaw: RouteRaw[] = [
     path: '07-confirmation',
     label: '07 - Confirmation dialog component',
     component: Confirmation07Component,
+  },
+  {
+    path: '08-infinite-scroll',
+    label: '08 - Infinite scroll component',
+    component: InfiniteScroll08Component,
   },
 ];
 
