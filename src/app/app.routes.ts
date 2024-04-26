@@ -7,6 +7,7 @@ import { Ellipses05Component } from './pages/ellipses-05/ellipses-05.component';
 import { ClickOutside06Component } from './pages/click-outside-06/click-outside-06.component';
 import { Confirmation07Component } from './pages/confirmation-07/confirmation-07.component';
 import { InfiniteScroll08Component } from './pages/infinite-scroll-08/infinite-scroll-08.component';
+import { HighlightText09Component } from './pages/highlight-text-09/highlight-text-09.component';
 
 type RouteRaw = {
   path: string;
@@ -56,6 +57,11 @@ export const routesRaw: RouteRaw[] = [
     path: '08-infinite-scroll',
     label: '08 - Infinite scroll component',
     component: InfiniteScroll08Component,
+  },
+  {
+    path: '09-highlight-text',
+    label: '09 - Highlight text component',
+    component: HighlightText09Component,
   },
 ];
 
