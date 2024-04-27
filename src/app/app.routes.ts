@@ -8,6 +8,7 @@ import { ClickOutside06Component } from './pages/click-outside-06/click-outside-
 import { Confirmation07Component } from './pages/confirmation-07/confirmation-07.component';
 import { InfiniteScroll08Component } from './pages/infinite-scroll-08/infinite-scroll-08.component';
 import { HighlightText09Component } from './pages/highlight-text-09/highlight-text-09.component';
+import { Responsive10Component } from './pages/responsive-10/responsive-10.component';
 
 type RouteRaw = {
   path: string;
@@ -62,6 +63,11 @@ export const routesRaw: RouteRaw[] = [
     path: '09-highlight-text',
     label: '09 - Highlight text component',
     component: HighlightText09Component,
+  },
+  {
+    path: '10-responsive',
+    label: '10 - Responsive component',
+    component: Responsive10Component,
   },
 ];
 
