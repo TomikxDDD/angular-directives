@@ -9,6 +9,7 @@ import { Confirmation07Component } from './pages/confirmation-07/confirmation-07
 import { InfiniteScroll08Component } from './pages/infinite-scroll-08/infinite-scroll-08.component';
 import { HighlightText09Component } from './pages/highlight-text-09/highlight-text-09.component';
 import { Responsive10Component } from './pages/responsive-10/responsive-10.component';
+import { HomeComponent } from './pages/home/home.component';
 
 type RouteRaw = {
   path: string;
@@ -19,6 +20,11 @@ type RouteRaw = {
 };
 
 export const routesRaw: RouteRaw[] = [
+  {
+    path: '',
+    label: 'Home',
+    component: HomeComponent,
+  },
   {
     path: '01-password-validation',
     label: '01 - Password Validation',

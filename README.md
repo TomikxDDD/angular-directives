@@ -1,6 +1,8 @@
-# CustomPipes
+# Custom Directives
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+
+This project contains implementation of Angular directives mention in [this article](https://blog.stackademic.com/mastering-angular-custom-directives-a-comprehensive-guide-with-15-real-world-examples-2023-a1d4645c4a0f)
 
 ## Development server
 
