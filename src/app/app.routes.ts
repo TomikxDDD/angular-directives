@@ -10,6 +10,7 @@ import { InfiniteScroll08Component } from './pages/infinite-scroll-08/infinite-s
 import { HighlightText09Component } from './pages/highlight-text-09/highlight-text-09.component';
 import { Responsive10Component } from './pages/responsive-10/responsive-10.component';
 import { HomeComponent } from './pages/home/home.component';
+import { InputMask11Component } from './pages/input-mask-11/input-mask-11.component';
 
 type RouteRaw = {
   path: string;
@@ -74,6 +75,11 @@ export const routesRaw: RouteRaw[] = [
     path: '10-responsive',
     label: '10 - Responsive component',
     component: Responsive10Component,
+  },
+  {
+    path: '11-input-mask',
+    label: '11 - Input mask',
+    component: InputMask11Component,
   },
 ];
 
