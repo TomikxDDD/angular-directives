@@ -13,3 +13,9 @@ body {
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+.tooltip {
+  background-color: #ddd;
+  border: #aaa 1px solid;
+  padding: 0.5em, 1.25em;
+}

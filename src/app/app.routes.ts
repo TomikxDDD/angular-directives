@@ -11,6 +11,7 @@ import { HighlightText09Component } from './pages/highlight-text-09/highlight-te
 import { Responsive10Component } from './pages/responsive-10/responsive-10.component';
 import { HomeComponent } from './pages/home/home.component';
 import { InputMask11Component } from './pages/input-mask-11/input-mask-11.component';
+import { Tooltip12Component } from './pages/tooltip-12/tooltip-12.component';
 
 type RouteRaw = {
   path: string;
@@ -80,6 +81,11 @@ export const routesRaw: RouteRaw[] = [
     path: '11-input-mask',
     label: '11 - Input mask',
     component: InputMask11Component,
+  },
+  {
+    path: '12-tooltip',
+    label: '12 - Tooltip ',
+    component: Tooltip12Component,
   },
 ];
 
