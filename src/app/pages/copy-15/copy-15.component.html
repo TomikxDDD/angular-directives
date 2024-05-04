@@ -1,0 +1,21 @@
+<mat-form-field>
+  <mat-label>Text to be copied</mat-label>
+  <mat-icon matPrefix>content_copy</mat-icon>
+  <input #input matInput type="text" />
+</mat-form-field>
+
+<div>
+  <button
+    mat-flat-button
+    color="primary"
+    appCopy
+    [copyText]="input.value"
+    (copied)="copied.set(true)"
+  >
+    Copy text!
+  </button>
+</div>
+
+@if (copied()) {
+  <p>Copied!</p>
+}
